@@ -3,9 +3,6 @@ import copy
 import os
 import os.path as osp
 import time
-import sys
-
-# sys.path.append("../../")
 
 import mmcv
 import mmcv_custom

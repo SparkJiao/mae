@@ -1,6 +1,6 @@
 # dataset settings
 dataset_type = 'ADE20KDataset'
-data_root = '~/c2fnet-tscvt/data'
+data_root = '/export/home2/fangkai/c2fnet-tscvt/data/'
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
 crop_size = (512, 512)
@@ -40,6 +40,12 @@ data = dict(
         img_dir='TrainDataset/Imgs',
         ann_dir='TrainDataset/GT',
         pipeline=train_pipeline),
+    val=dict(
+        type=dataset_type,
+        data_root=data_root,
+        img_dir='TestDataset/NC4K/Imgs',
+        ann_dir='TestDataset/NC4K/GT',
+        pipeline=test_pipeline),
     test=dict(
         type=dataset_type,
         data_root=data_root,
